@@ -1,0 +1,28 @@
+//This program helps the user maintain a count when playing Blackjack. It is my experiment using a JavaScript switch statement.
+
+var count = 0;
+
+function cc(card) {
+  switch(card) {
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+      count++; //Each card w/ value of 1-6 increases the count by one.
+      break;
+    case 10:
+    case "J":
+    case "Q":
+    case "K":
+    case "A":
+      count--; //Each card w/ a value greater than 10 decreases the count by one.
+      break;
+  }
+  if (count > 0){
+    return count +" Bet"; //A positive count indicates the player should place a bet.
+  } else{
+    return count +" Hold"; //A negitive count indicates the player should place a bet.
+  }
+  
