@@ -1,0 +1,22 @@
+
+function palindrome(str) {
+//remove spaces
+  str.replace(/\s/g, "");
+//remove non-alphanumeric characters
+  str= str.replace(/[\w_]/g, "");
+//convert to lowerCase
+  str = str.toLowerCase();
+//reverse string
+  var revArray = str.split([]);
+  revArray = revArray.reverse();
+  var revStr = revArray.join("");
+//test for palindorme
+  return str === revStr;
+}
+
+
+//tests
+palindrome("eye"); //return true
+palindrome("race Car!"); //return true
+palindrome("Test if I'm a Palindrome"); //return false
+palindrome("0_0 (: /-\ :) 0-0"); //return true
