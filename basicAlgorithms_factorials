@@ -1,0 +1,20 @@
+
+function factorialize(num) {
+  if (num < 0){
+    return "undefined";  //factorial of a negitive number is undefined.
+  } 
+  else if (num === 0){
+    return 1; //factorial of 0 is always 1. 
+  }
+  var temp = num;
+  while (num-- > 2){ //ensures each number is considered with the exception of 1 since n*1 is always n.
+    temp *= num;
+  }
+  return temp;
+}
+
+//tests
+
+factorialize(5); //returns 120
+factorialize(0); //returns 1
+factorialize(-1) //returns undefined
