@@ -1,0 +1,8 @@
+function reverseString(str) {
+  var array = str.split([]); //convert string to array 
+  array.reverse(); //reverse order of elements in array
+  str = array.join(""); //convert array to string
+  return str;
+}
+
+reverseString("hello"); //test
