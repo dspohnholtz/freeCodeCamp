@@ -1,0 +1,21 @@
+function findLongestWord(str) {
+  var length = 0;
+  //convert string to array
+  var wordArray = str.split([" "]);
+  //examine each word in array 
+  for(var i = 0; i < wordArray.length; i++){ 
+    if (wordArray[i].length > length){
+      length = wordArray[i].length;
+    }
+  }
+  return length;
+}
+
+//test
+findLongestWord("We are the Knights who say 'Ni'"); // return 7
+
+/*
+What I Learned:
+Converting a String to an Array: I used the string.split() property to convert the given string to an array. I set the property parameters to split the string at each space, ensuring each word becomes a seperate array element.
+Using a For Loop to Compare Array Elements: Using this loop ensured each array element was examined and compared to the longest array element while automatically terminating at the end of the string.
+*/
