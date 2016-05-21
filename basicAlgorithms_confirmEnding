@@ -1,0 +1,10 @@
+function confirmEnding(str, target) {
+  if(str.substr(str.length-target.length) === target){
+    return true;
+  } return false;
+}
+
+//test
+confirmEnding("Bastian", "n"); //return true
+confirmEnding("Use the Force, Luke", "Vader"); //return false
+confirmEnding("Han shot first", "st"); //return true
